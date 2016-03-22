@@ -1,0 +1,23 @@
+{
+  "name": "JS设计模式",
+  "homepage": "https://github.com/bgdsh/playground",
+  "authors": [
+    "bgdsh <bgd_sh@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "backbone": "^1.3.2",
+    "underscore": "^1.8.3"
+  }
+}

@@ -39,8 +39,8 @@ var pubsub = {};
     };
 })(pubsub);
 
-var messageLogger = function (topic, data) {
-    console.log("Logging: " + topic + ":" + data);
-};
-var subscription = pubsub.subscribe("inbox/newMessage", messageLogger);
-pubsub.publish("inbox/newMessage", "Hello World");//此处hello world可以替换成任意对象
+//var messageLogger = function (topic, data) {
+//    console.log("Logging: " + topic + ":" + data);
+//};
+//var subscription = pubsub.subscribe("inbox/newMessage", messageLogger);
+//pubsub.publish("inbox/newMessage", "Hello World");//此处hello world可以替换成任意对象

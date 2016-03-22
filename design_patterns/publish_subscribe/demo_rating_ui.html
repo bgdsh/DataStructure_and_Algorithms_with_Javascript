@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布/订阅模式UI界面</title>
+</head>
+<body>
+<script id="userTemplate" type="text/html">
+    <li><%= name %></li>
+</script>
+<script id="ratingsTemplate" type="text/html">
+    <li>
+        <strong><%=movie%></strong>was rated <%=rating%> /5
+    </li>
+</script>
+<div id="container">
+    <div class="simpleForm">
+        <p>
+            <label for="weibo_handle">微博账户:</label>
+            <input type="text" id="weibo_handle">
+        </p>
+        <p>
+            <label for="movie_seen">电影名:</label>
+            <input type="text" id="movie_seen" placeholder="请输入你今年看过的一个电影">
+        </p>
+        <p>
+            <label for="movie_rating">评分:</label>
+            <select id="movie_rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </p>
+        <p>
+            <button id="add">提交评级</button>
+        </p>
+    </div>
+    <div class="summaryTable">
+        <div id="users">
+            <h3>近期用户:</h3>
+        </div>
+        <div id="ratings">
+            <h3>近期评分:</h3>
+        </div>
+    </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/underscore/underscore-min.js"></script>
+<script src="demo_rating.js"></script>
+</body>
+</html>
