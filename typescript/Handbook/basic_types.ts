@@ -16,7 +16,7 @@ var colorName:String = Color[2];
 console.log(colorName);
 
 var arr3:any[]=[1,true,"aaa"];
-arr3[1]="我还是字符串"
+arr3[1]="我还是字符串";
 
 function warnUser():void{
     console.log("aaa");
