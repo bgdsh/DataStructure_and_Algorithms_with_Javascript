@@ -1,0 +1,22 @@
+{
+  "name": "wu_page",
+  "homepage": "https://github.com/bgdsh/playground",
+  "authors": [
+    "bgdsh <bgd_sh@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "bootstrap": "^3.3.6"
+  }
+}

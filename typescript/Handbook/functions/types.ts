@@ -15,3 +15,6 @@ function buildName(firstName:string, lastName?:string):string {
         return firstName;
     }
 }
+function bgd(params:string) {
+    console.log("我是白国栋！");
+}
