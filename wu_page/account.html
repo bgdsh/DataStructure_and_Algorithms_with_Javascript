@@ -63,36 +63,64 @@
                 <li role="presentation"><a href="#">Messages</a></li>
             </ul>
         </div>
-        <div class="col-md-10">
-            <div class="order-list">
-                <div class="row order-container">
-                    <div class="col-md-2"><img src=""></div>
-                    <div class="col-md-4">desc</div>
-                    <div class="col-md-2">price</div>
-                    <div class="col-md-2 status">
-                        <label class="label label-primary peisongzhong">
-                            配送中
-                        </label>
-                        <label class="label label-success hidden yishouhuo">
-                            已收货
-                        </label>
-                    </div>
-                    <div class="col-md-2 action">
-                        <button class="btn btn-primary confirm_receive">确认收货</button>
-                    </div>
+        <div class="col-md-5">
+            <h3>个人信息</h3>
+            <form>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" disabled value="吴冠华">
                 </div>
-            </div>
-            <div class="order-list">
-                <div class="row order-container">
-                    <div class="col-md-2"><img src=""></div>
-                    <div class="col-md-4">desc</div>
-                    <div class="col-md-2">price</div>
-                    <div class="col-md-2">status</div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary">确认收货</button>
-                    </div>
+                <div class="form-group">
+                    <label>邮箱</label>
+                    <input type="email" class="form-control" disabled value="wgh@akka.co">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label>手机</label>
+                    <input type="text" class="form-control" disabled value="吴冠华">
+                </div>
+                <div class="form-group">
+                    <label>收货地址</label>
+                    <div class="address-holder">
+                        <div class="col-md-3 address">
+                            <button class="btn btn-danger  pull-right remove-address">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            地址1
+                        </div>
+                        <div class="col-md-3 address">
+                            <button class="btn btn-danger  pull-right remove-address">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            地址2
+                        </div>
+                        <div class="col-md-3 address">
+                            <button class="btn btn-danger  pull-right remove-address">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            地址3
+                        </div>
+                        <div class="col-md-3 address">
+                            <button class="btn btn-danger  pull-right remove-address">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                            地址4
+                        </div>
+                    </div>
+                    <input id="new-address" type="text" class="form-control " value="吴冠华">
+                    <button class="btn btn-default pull-right add-address">添加</button>
+                </div>
+                <div class="form-group" style="clear: both">
+                    <label>密码</label>
+                    <input type="email" class="form-control" disabled value="wgh@akka.co">
+                </div>
+                <div class="form-group">
+                    <label>确认密码</label>
+                    <input type="email" class="form-control" disabled value="wgh@akka.co">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary pull-right">保存</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -102,14 +130,26 @@
 <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    $(".confirm_receive").click(function () {
-//        if(confirm("确定确认收货?")){
-//
-//        }
-        $(this).attr("disabled", true);
-        var divStatus = $(this).parent().parent().find(".status");
-        divStatus.find(".peisongzhong").hide();
-        divStatus.find(".yishouhuo").removeClass("hidden");
-    })
+
+    function bindRemoveAddress() {
+        $(".remove-address").click(function (event) {
+            event.preventDefault();
+            $(this).parent().remove();
+        });
+    }
+
+    $(".add-address").click(function (event) {
+        event.preventDefault();
+        var html =
+                '<div class="col-md-3 address">' +
+                '<button class="btn btn-danger  pull-right remove-address">' +
+                '<span class="glyphicon glyphicon-remove"></span> ' +
+                '</button>' +
+                $("#new-address").val() +
+                '</div>';
+        $(".address-holder").append(html);
+        bindRemoveAddress();
+    });
+    bindRemoveAddress();
 </script>
 </html>

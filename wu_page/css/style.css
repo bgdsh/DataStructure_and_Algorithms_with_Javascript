@@ -1,0 +1,114 @@
+.main {
+    padding-top: 50px;
+}
+
+ul.v-nav {
+    margin-top: 20px;
+}
+
+ul.v-nav li {
+    text-align: center;
+}
+
+.order-list {
+    margin-top: 20px;
+}
+
+.order-list a.active {
+    background: #ffffff;
+    color: #000;
+    text-shadow: none;
+}
+
+.order-list a.active:hover {
+    background: lightblue;
+    color: #000;
+}
+
+.order-list a:hover {
+    background: lightblue;
+}
+
+.order-container {
+
+}
+
+.order-container:first-child img {
+    width: 150px;
+    height: 150px;
+}
+
+.order-container:last-child button {
+    margin-top: 65px;
+}
+
+.order-container .status {
+    line-height: 150px;
+}
+
+.starred-list {
+    margin-top: 20px;
+}
+
+.star {
+    font-size: 2em;
+    color: red;
+}
+
+.good-cover img {
+    width: 80%;
+}
+
+.thumbnail {
+    cursor: pointer;
+}
+
+.address {
+    border: 2px dashed lightblue;
+    height: 150px;
+    padding-right: 5px;
+}
+
+.address button {
+    width: 1.5em;
+    padding: 0;
+}
+
+.pagination-holder {
+    width: 100%;
+}
+
+.pagination {
+    margin: 0 auto;
+}
+
+.good-show-holder {
+    margin-top: 20px;
+}
+
+.good-show-holder h3 {
+    margin-top: 0;
+}
+
+#sales-count, #comment-count {
+    width: 100px;
+    text-align: center;
+}
+
+.count-name {
+    color: #777;
+}
+
+.price {
+    color: #ff0000;
+    font-size: 2em;
+}
+
+.input-group-addon {
+    background-color: #cccccc;
+}
+
+.good-show-holder .input-group {
+    width: 100px;
+}
+

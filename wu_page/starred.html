@@ -58,38 +58,45 @@
     <div class="row main">
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked v-nav">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Home</a></li>
+                <li role="presentation" class="active"><a href="#">Profile</a></li>
                 <li role="presentation"><a href="#">Messages</a></li>
             </ul>
         </div>
         <div class="col-md-10">
-            <div class="order-list">
-                <div class="row order-container">
-                    <div class="col-md-2"><img src=""></div>
-                    <div class="col-md-4">desc</div>
-                    <div class="col-md-2">price</div>
-                    <div class="col-md-2 status">
-                        <label class="label label-primary peisongzhong">
-                            配送中
-                        </label>
-                        <label class="label label-success hidden yishouhuo">
-                            已收货
-                        </label>
-                    </div>
-                    <div class="col-md-2 action">
-                        <button class="btn btn-primary confirm_receive">确认收货</button>
-                    </div>
-                </div>
-            </div>
-            <div class="order-list">
-                <div class="row order-container">
-                    <div class="col-md-2"><img src=""></div>
-                    <div class="col-md-4">desc</div>
-                    <div class="col-md-2">price</div>
-                    <div class="col-md-2">status</div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary">确认收货</button>
+            <div class="starred-list">
+                <div class="col-md-3">
+                    <div class="thumbnail" style="padding: 0" data-href="">
+                        <div class="good-cover" style="padding:4px">
+                            <img alt="300x200" src="images/dog.jpg">
+                            <span class="glyphicon glyphicon-star pull-right star" aria-hidden="true"></span>
+                        </div>
+                        <div class="caption">
+                            <h2>崇明花菜</h2>
+                            <p>新鲜崇明岛花菜</p>
+                        </div>
+                        <div class="modal-footer" style="text-align: left">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                     aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span4"><b>60%</b>
+                                    <br>
+                                    <small>FUNDED</small>
+                                </div>
+                                <div class="span4"><b>$400</b>
+                                    <br>
+                                    <small>PLEDGED</small>
+                                </div>
+                                <div class="span4"><b>18</b>
+                                    <br>
+                                    <small>DAYS</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,14 +109,9 @@
 <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    $(".confirm_receive").click(function () {
-//        if(confirm("确定确认收货?")){
-//
-//        }
-        $(this).attr("disabled", true);
-        var divStatus = $(this).parent().parent().find(".status");
-        divStatus.find(".peisongzhong").hide();
-        divStatus.find(".yishouhuo").removeClass("hidden");
+    $(".thumbnail").click(function () {
+        location.href = $(".thumbnail").attr("data-href");
     })
+
 </script>
 </html>
