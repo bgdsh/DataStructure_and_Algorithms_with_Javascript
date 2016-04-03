@@ -1,0 +1,10 @@
+﻿<Window x:Class="WPF_Async_Lambda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="98.88" Width="172.931">
+    <Grid Margin="0,0,3,-1.2">
+        <Label Name="workStartedTextBlock" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="startWorkButton" Content="开始工作" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

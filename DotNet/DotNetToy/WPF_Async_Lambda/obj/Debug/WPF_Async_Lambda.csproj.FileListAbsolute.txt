@@ -1,0 +1,13 @@
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\bin\Debug\WPF_Async_Lambda.exe.config
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\bin\Debug\WPF_Async_Lambda.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\bin\Debug\WPF_Async_Lambda.pdb
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.csprojResolveAssemblyReference.cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\MainWindow.baml
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\MainWindow.g.cs
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\App.g.cs
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda_MarkupCompile.cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.g.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.Properties.Resources.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.csproj.GenerateResource.Cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async_Lambda\obj\Debug\WPF_Async_Lambda.pdb
