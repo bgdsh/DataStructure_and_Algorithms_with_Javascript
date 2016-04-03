@@ -1,0 +1,9 @@
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\bin\Debug\CS_Async.exe.config
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\bin\Debug\CS_Async.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\bin\Debug\CS_Async.pdb
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.csprojResolveAssemblyReference.cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.Form1.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.Properties.Resources.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.csproj.GenerateResource.Cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\CS_Async\obj\Debug\CS_Async.pdb

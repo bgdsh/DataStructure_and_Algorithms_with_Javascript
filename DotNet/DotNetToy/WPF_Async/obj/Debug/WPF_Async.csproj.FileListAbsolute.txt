@@ -1,0 +1,13 @@
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\bin\Debug\WPF_Async.exe.config
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\bin\Debug\WPF_Async.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\bin\Debug\WPF_Async.pdb
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.csprojResolveAssemblyReference.cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\MainWindow.baml
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\MainWindow.g.cs
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\App.g.cs
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async_MarkupCompile.cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.g.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.Properties.Resources.resources
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.csproj.GenerateResource.Cache
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\WPF_Async\obj\Debug\WPF_Async.pdb
