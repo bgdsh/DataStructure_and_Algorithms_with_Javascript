@@ -1,0 +1,5 @@
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\Console_TaskParallel\bin\Debug\Console_TaskParallel.exe.config
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\Console_TaskParallel\bin\Debug\Console_TaskParallel.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\Console_TaskParallel\bin\Debug\Console_TaskParallel.pdb
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\Console_TaskParallel\obj\Debug\Console_TaskParallel.exe
+C:\Users\bai\Documents\GitHub\DataStructure_and_Algorithms_with_Javascript\DotNet\DotNetToy\Console_TaskParallel\obj\Debug\Console_TaskParallel.pdb

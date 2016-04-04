@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Async_GUI", "WPF_Async_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_BackgroundWorker_GUI", "WPF_BackgroundWorker_GUI\WPF_BackgroundWorker_GUI.csproj", "{825C74C7-B466-4D2A-9E58-5E3931FF136F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_TaskParallel", "Console_TaskParallel\Console_TaskParallel.csproj", "{FD03F020-EEA8-4027-89C9-C58C5ECE8178}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{825C74C7-B466-4D2A-9E58-5E3931FF136F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825C74C7-B466-4D2A-9E58-5E3931FF136F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825C74C7-B466-4D2A-9E58-5E3931FF136F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD03F020-EEA8-4027-89C9-C58C5ECE8178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD03F020-EEA8-4027-89C9-C58C5ECE8178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD03F020-EEA8-4027-89C9-C58C5ECE8178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD03F020-EEA8-4027-89C9-C58C5ECE8178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
