@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPF_BackgroundWorker_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ProgressBar Name="progressBar" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="498"/>
+        <Button Name="btnProcess" Content="处理" HorizontalAlignment="Left" Margin="142,45,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.5,0.5" Click="btnProcess_Click">
+
+        </Button>
+        <Button Name="btnCancel" Content="取消" HorizontalAlignment="Left" Margin="142,69,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.5,0.5" Height="18" Click="btnCancel_Click">
+
+        </Button>
+
+    </Grid>
+</Window>
