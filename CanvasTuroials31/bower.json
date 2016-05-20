@@ -1,0 +1,21 @@
+{
+  "name": "CanvasTuroials31",
+  "homepage": "https://github.com/bgdsh/playground",
+  "authors": [
+    "bgdsh <bgd_sh@hotmail.com>"
+  ],
+  "description": "跟着这个教程敲代码",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}

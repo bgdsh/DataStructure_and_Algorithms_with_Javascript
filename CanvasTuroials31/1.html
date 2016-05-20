@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/wirelib.js"></script>
+    <script>
+        $(function () {
+            var i,points=[];
+            wirelib.initWithCanvas($("#canvas")[0]);
+            for(i=0;i<20;i+=1){
+                points.push(Math.random()*500-250,-400+Math.random()*500-250,Math.random()*500-250);
+            }
+            wirelib.addLine(points);
+            wirelib.addBox(0,0,0,300,300,300);
+            wirelib.addCircle(-200,400,0,200,32);
+            wirelib.addRect(200,400,0,400,250);
+            wirelib.loop(24, function () {
+                wirelib.rotateY(0.01);
+                wirelib.draw();
+            })
+        });
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="1000"></canvas>
+</body>
+</html>

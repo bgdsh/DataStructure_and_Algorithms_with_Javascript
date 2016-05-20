@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Basics</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/wirelib.js"></script>
+    <script>
+        $(function () {
+            var canvas=$("#canvas")[0];
+            var context=canvas.getContext('2d');
+
+            context.beginPath();
+            context.moveTo(100,100);
+            context.lineTo(200,200);
+            context.stroke();
+
+            context.beginPath();
+            context.arc(250,100,40,0,Math.PI*2,false);
+            context.fillStyle="#ff00EE";
+            context.fill();
+
+            context.beginPath();
+            context.arc(250,100,40,0,Math.PI*2,false);
+            context.strokeStyle="#eeff00";
+            context.lineWidth=10;
+            context.stroke();
+
+            context.strokeStyle="#000000";
+            context.lineWidth=1;
+            context.stroke();
+        });
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"/>
+</body>
+</html>
