@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linked List</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var firstPoint,lastPoint,maxPoints=100,numPoints= 0,
+                    canvas,context,width,height,gravity=0.1,emitter;
+            canvas=$("#canvas")[0];
+            width=canvas.width;
+            height=canvas.height;
+            context=canvas.getContext("2d");
+            emitter={x:width/2,y:height};
+            function addPoint(){
+                var point;
+                if(numPoints<maxPoints){
+                    point={};
+                    initPoint(point);
+                    if(numPoints==0){
+                        firstPoint=point;
+                    }else{
+                        lastPoint.next=point;
+                    }
+                    lastPoint=point;
+                    numPoints+=1;
+                }
+            }
+            function initPoint(p){
+                p.x=emitter.x;
+                p.y=emitter.y;
+                var r=Math.ceil(Math.random()*255);
+                var g=Math.ceil(Math.random()*255);
+                var b=Math.ceil(Math.random()*255);
+                p.color="rgb("+r+","+g+","+b+")";
+                p.vx=Math.random()*4-2;
+                p.vy=Math.random()*-5-3;
+                p.radius=Math.random()*5+1;
+            }
+            function update(){
+                var point=firstPoint;
+                while(point!=null){
+                    point.vy+=gravity;
+                    point.x+=point.vx;
+                    point.y+=point.vy;
+                    if(point.x>width|| point.x<0 || point.y>height|| point.y<0){
+                        initPoint(point);
+                    }
+                    point=point.next;
+                }
+            }
+            function draw(){
+                var point=firstPoint;
+                context.fillStyle="rgba(0,0,0,0.05)";
+                context.fillRect(0,0,width,height);
+                while (point!=null){
+                    context.fillStyle=point.color;
+                    context.beginPath();
+                    context.arc(point.x,point.y,point.radius,0,Math.PI*2,false);
+                    context.fill();
+                    point=point.next;
+                }
+            }
+            setInterval(function () {
+                addPoint();
+                update();
+                draw();
+            },1000/24);
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>
