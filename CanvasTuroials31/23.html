@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text-Shadow</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas=$("#canvas")[0];
+            var context=canvas.getContext("2d");
+            context.font="20pt Arial";
+            context.fillText("No Shadow",100,40);
+            context.shadowOffsetX=3;
+            context.shadowOffsetY=3;
+            context.fillText("Still no shadow",100,80);
+            context.shadowColor="rgba(0,0,0,0.5)";
+            context.fillText("Ctappy Shadow",100,120);
+            context.shadowBlur=4;
+            context.fillText("Nice Shadow",100,160);
+        })
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>

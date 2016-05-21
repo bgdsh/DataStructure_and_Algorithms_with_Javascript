@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformation</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas=$("#canvas")[0];
+            var context=canvas.getContext("2d");
+            function drawRect(color){
+                context.strokeStyle=color;
+                context.strokeRect(0.5,0.5,50,50);
+            }
+            context.transform(1,0,0,1,100,0);//向右100
+            drawRect("#000000");
+            context.translate(0,55);//在原来的基础上向下55
+            drawRect("#ff0000");
+            context.translate(100,0);
+            context.rotate(Math.PI/4);//以左上角为中心旋转的
+            drawRect("#00ff00");
+            context.translate(100,0);
+            context.scale(2,2);
+            drawRect("#0000ff");
+            context.setTransform(1,0,0,1,0,0);//重置变换
+            drawRect("#ffff00");
+            context.lineWidth=0.05;
+            context.strokeStyle="#000000";
+            var i,angle=0;
+            for(i = 0; i < 500; i += 1) {
+                context.setTransform(Math.cos(angle), -Math.sin(angle), Math.sin(angle), Math.cos(angle), i + 50, 100);
+                context.scale(angle/10,angle/10);
+                context.strokeStyle="rgb("+Math.floor(i*angle*0.02)+","+Math.floor(255-i*angle*0.02)+","+Math.floor(Math.random()*255)+")";
+                context.strokeRect(-25, -25, 50, 50);
+                angle += 0.05;
+            }
+        })
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="500"></canvas>
+</body>
+</html>

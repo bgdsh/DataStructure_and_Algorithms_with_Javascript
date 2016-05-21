@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas=$("#canvas")[0];
+            var context=canvas.getContext("2d");
+            context.fillText("Hello GoodBai",50,50);
+            context.fillStyle="#ff0000";
+            context.fillText("I am red",50,70);
+            context.lineWidth=0.5;
+            context.font="20pt Arial";
+            context.strokeText("Hello GoodBai",50,90);
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>
