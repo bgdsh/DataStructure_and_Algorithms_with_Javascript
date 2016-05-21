@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas-Images</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#image").load(function () {
+                var canvas,context,image,phase= 0,w,h;
+                image=$("#image")[0];
+                canvas=$("#canvas")[0];
+                w=canvas.width;
+                h=canvas.height;
+                context=canvas.getContext("2d");
+                setInterval(function () {
+                    context.clearRect(0,0,w,h);
+                    context.drawImage(image,0,0,200+Math.sin(phase)*50,200+Math.cos(phase)*50);
+                    phase+=0.01;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="1000"></canvas>
+<img id="image" src="images/bighero.jpg">
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>雪碧图</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas,context,image,width,height,
+                    xpos= 0,ypos= 0,index= 0,
+                    w, h,
+                    numFrames=60,frameSize=60;
+            image=new Image();
+            image.src="images/spritesheet.png";
+            image.onload=function () {
+                width=image.width;
+                height=image.height;
+                canvas=$("#canvas")[0];
+                w=canvas.width;
+                h=canvas.height;
+                context=canvas.getContext('2d');
+                setInterval(function () {
+                    context.clearRect(0,0,w,h);
+                    context.drawImage(image,xpos,ypos,frameSize,frameSize,0,0,frameSize,frameSize);
+                    xpos+=frameSize;
+                    index+=1;
+                    if(index>=numFrames){
+                        xpos=0;
+                        ypos=0;
+                        index=0;
+                    }else if(xpos+frameSize>width){
+                        xpos=0;
+                        ypos+=frameSize;
+                    }
+                },1000/24);
+            };
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="60" height="60"></canvas>
+</body>
+</html>
