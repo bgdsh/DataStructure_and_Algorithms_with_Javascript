@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curves</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas=$("#canvas")[0];
+            var context=canvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(100,100);
+            context.quadraticCurveTo(200,0,300,100);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(100,100);
+            context.strokeStyle="rgb(255,0,0)";
+            context.bezierCurveTo(200,0,400,300,300,100);
+            context.stroke();
+            var i, j,points=[],width,height,numLines=10;
+            width=canvas.width;
+            height=canvas.height;
+            context.lineWidth=0.1;
+            for(i=0;i<4*numLines;i+=1){
+                points.push({
+                    x:Math.random()*width,
+                    y:Math.random()*height,
+                    vx:Math.random()*4-2,
+                    vy:Math.random()*4-2
+                });
+            }
+            setInterval(function () {
+                for(j=0;j<numLines;j++){
+                    context.beginPath();
+                    context.moveTo(points[j*4].x,points[j*4].y);
+                    context.bezierCurveTo(
+                            points[j*4+1].x,points[j*4+1].y,
+                            points[j*4+2].x,points[j*4+2].y,
+                            points[j*4+3].x,points[j*4+3].y
+                    );
+                    context.stroke();
+                }
+                for(i=0;i<points.length;i++){
+                    points[i].x+=points[i].vx;
+                    points[i].y+=points[i].vy;
+                }
+            },1000/24);
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>
