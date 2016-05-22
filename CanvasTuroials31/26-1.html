@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标划线</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var canvas,context;
+            canvas=$("#canvas")[0];
+            context=canvas.getContext("2d");
+            $(canvas).mousemove(function (event) {
+                context.fillRect(
+                        event.pageX-canvas.offsetLeft-1,
+                        event.pageY-canvas.offsetTop-1,
+                        2,2
+                );
+            });
+            var canvas1, i,context1,points=[];
+            canvas1=$("#canvas1")[0];
+            context1=canvas1.getContext("2d");
+            context1.strokeStyle="rgba(0,0,0,0.2)";
+            $(canvas1).mousemove(function (event) {
+                var p0,p1,dx,dy,dist,max=50;
+                p0={x:event.pageX-this.offsetLeft,y:event.pageY-this.offsetTop};
+                for(i=0;i<points.length;i++){
+                    p1=points[i];
+                    dx=p1.x-p0.x;
+                    dy=p1.y-p0.y;
+                    dist=Math.sqrt(dx*dx+dy*dy);
+                    if(dist<max){
+                        context1.beginPath();
+                        context1.lineWidth=1.0-dist/max;
+                        context1.moveTo(p0.x,p0.y);
+                        context1.lineTo(p1.x,p1.y);
+                        context1.stroke();
+                    }
+                }
+                points.push(p0);
+            });
+        });
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 1px solid blue;"></canvas>
+<canvas id="canvas1" width="500" height="500"></canvas>
+</body>
+</html>
