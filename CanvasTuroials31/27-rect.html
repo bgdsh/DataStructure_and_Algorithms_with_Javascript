@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Part 2</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var canvas,context,width,height, rect,clickX,clickY,drag=false;
+            canvas=$("#canvas")[0];
+            context=canvas.getContext("2d");
+            width=canvas.width;
+            height=canvas.height;
+            x=width/2;
+            y=height/2;
+            rect={
+                x:width/2-25,
+                y:height/2-25,
+                w:50,
+                h:50
+            };
+            function draw(){
+                context.clearRect(0,0,width,height);
+                context.fillRect(rect.x,rect.y,rect.w,rect.h);
+            }
+            draw();
+            $(canvas).mousedown(function (event) {
+                var x=event.pageX-this.offsetLeft;
+                var y=event.pageY-this.offsetTop;
+                if(x>rect.x && x<rect.x+rect.w && y>rect.y && y<rect.y+rect.h){
+                    drag=true;
+                    clickX=x-rect.x;
+                    clickY=y-rect.y;
+                }
+            }).mouseup(function (event) {
+                drag=false;
+            }).mousemove(function (event) {
+                if(drag){
+                    rect.x=event.pageX-this.offsetLeft-clickX;
+                    rect.y=event.pageY-this.offsetTop-clickY;
+                    draw();
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>
