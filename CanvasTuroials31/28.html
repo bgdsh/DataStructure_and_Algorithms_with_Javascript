@@ -39,10 +39,60 @@
                     this.x+(this.width-this.context.measureText(this.label).width)/2,
                     this.y+(this.height+9)/2
             );
-        }
+        };
+        Button.prototype.checkMouseDown= function (x, y) {
+            if(x>this.x && x<this.x+this.width && y>this.y && y<this.y+this.height){
+                this.state="down";
+            }else{
+                this.state="up";
+            }
+            this.draw();
+        };
+        Button.prototype.checkMouseUp = function(x, y) {
+            if(x > this.x && x < this.x + this.width &&
+                    y > this.y && y < this.y + this.height) {
+                this.state = "over";
+                if(this.onclick != null) {
+                    this.onclick();
+                }
+            }
+            else {
+                this.state = "up";
+            }
+            this.draw();
+        };
+        Button.prototype.checkMouseMove = function(x, y) {
+            if(x > this.x && x < this.x + this.width &&
+                    y > this.y && y < this.y + this.height) {
+                this.state = "over";
+            }
+            else {
+                this.state = "up";
+            }
+            this.draw();
+        };
+        $(function () {
+            var canvas,context,button;
+            canvas=$("#canvas")[0];
+            context=canvas.getContext("2d");
+            button=new Button(canvas,100,100,"Click Me", function () {
+                context.beginPath();
+                context.arc(Math.random() * canvas.width, Math.random() * canvas.height, 5 + Math.random() * 15, 0, Math.PI * 2, false);
+                context.fill();
+            });
+            $(canvas).mousedown(function(event) {
+                button.checkMouseDown(event.pageX - this.offsetLeft, event.pageY - this.offsetTop);
+            });
+            $(canvas).mouseup(function(event) {
+                button.checkMouseUp(event.pageX - this.offsetLeft, event.pageY - this.offsetTop);
+            });
+            $(canvas).mousemove(function(event) {
+                button.checkMouseMove(event.pageX - this.offsetLeft, event.pageY - this.offsetTop);
+            });
+        })
     </script>
 </head>
 <body>
-
+<canvas id="canvas" width="500" height="500"></canvas>
 </body>
 </html>
