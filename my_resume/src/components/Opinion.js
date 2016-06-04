@@ -7,7 +7,7 @@ export default class Opinion extends React.Component{
       <div className="pageHolder opinion">
       <h2>我的技术观念</h2>
       <Row type="flex" justify="center" gutter={16} className="contentHolder">
-        <Col span={9}>
+        <Col span={20}>
           <Collapse accordion>
             <Panel header={'关于全栈'} key="1">
             <p>

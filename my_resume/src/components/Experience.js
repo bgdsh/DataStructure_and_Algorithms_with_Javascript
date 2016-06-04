@@ -7,7 +7,7 @@ export default class Experience extends React.Component{
       <div className="pageHolder profile">
           <h2>工作经历及项目经验</h2>
           <Row type="flex" justify="center" gutter={16} className="contentHolder">
-            <Col span={9}>
+            <Col span={20}>
               <Collapse accordion>
                 <Panel header={'上海熙际科技有限公司-全栈工程师'} key="1">
                 <p>公司介绍：</p>
