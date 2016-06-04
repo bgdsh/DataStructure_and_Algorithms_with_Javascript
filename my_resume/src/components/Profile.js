@@ -29,12 +29,12 @@ export default class Profile extends React.Component{
                     主攻方向为后端开发，兼顾前端功能性开发，专注Node.js生态圈一年有余。
                     <i>
                     powered by『<a href="http://ant.design/">antd</a>』。
-                    简历源码在<a href="">这里</a>。
+                    简历源码在<a href="https://github.com/bgdsh/playground/tree/master/my_resume">这里</a>。
                     </i>
                     </Col>
                 </Row>
             </div>
         );
-        
+
     }
 }
