@@ -1,0 +1,14 @@
+.pageHolder{
+    margin-top: 10px;
+}
+.contentHolder{
+    margin-top: 10px;
+}
+.profile img.head{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+}
