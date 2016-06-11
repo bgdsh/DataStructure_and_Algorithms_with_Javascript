@@ -1,0 +1,11 @@
+{
+  "generator-ng-fullstack": {
+    "username": "bgd_sh",
+    "appName": "NgFullstackByGo",
+    "stack": "fullstack",
+    "server": "go",
+    "client": "ng2",
+    "secure": true,
+    "differentStaticServer": false
+  }
+}
