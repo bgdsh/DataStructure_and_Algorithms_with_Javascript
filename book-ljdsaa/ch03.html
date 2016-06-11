@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>第三章：栈</title>
+    <script type="text/javascript">
+    function Stack() {
+      var items=[];
+      this.push=function(ele){
+        items.push(ele);
+      }
+      this.pop=function(){
+        return items.pop();
+      }
+      this.peek=function(){
+        return items[items.length-1];
+      }
+      this.isEmpty=function () {
+        return items.length==0;
+      }
+      this.size=function () {
+        return this.length;
+      }
+      this.clear=function () {
+        items=[];
+      }
+      this.print=function () {
+        console.log(items.toString());
+      }
+    }
+    function divideBy2(decNumber) {
+      var remStack=new Stack(),rem,binaryString="";
+      while (decNumber>0) {
+        rem=Math.floor(decNumber%2);
+        remStack.push(rem);
+        decNumber=Math.floor(decNumber/2);
+      }
+      while(!remStack.isEmpty()){
+        binaryString+=remStack.pop().toString();
+      }
+      return binaryString;
+    }
+    document.write(divideBy2(22));// 10110
+    document.write("<br/>");
+    document.write(divideBy2(223)); // 11011111
+    document.write("<br/>");
+    document.write(divideBy2(224));// 11100000
+    document.write("<br/>");
+    function baseConverter(decNumber,base) {
+      var remStack=new Stack(),rem,binaryString="",digits="0123456789ABCDEF";
+      while (decNumber>0) {
+        rem=Math.floor(decNumber%base);
+        remStack.push(rem);
+        decNumber=Math.floor(decNumber/base);
+      }
+      while(!remStack.isEmpty()){
+        binaryString+=digits[remStack.pop()];
+      }
+      return binaryString;
+    }
+    document.write(baseConverter(22,8));// 26
+    document.write("<br/>");
+    document.write(baseConverter(223,16)); // DF
+    document.write("<br/>");
+    document.write(baseConverter(224,16));// E0
+    document.write("<br/>");
+    </script>
+  </head>
+  <body>
+    <p>
+      +0 -0 NaN 都是 false
+    </p>
+    <p>
+
+    </p>
+  </body>
+</html>
