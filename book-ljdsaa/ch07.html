@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ch07:字典和散列表</title>
+    <script type="text/javascript">
+      function Dictionary() {
+        var items={};
+        this.set=function (key,value) {
+          items[key]=value;
+        };
+        this.remove=function (key) {
+          if(this.has(key)){
+            delete items[key];
+            return true;
+          }
+          return false;
+        };
+        this.has=function (key) {
+          return key in items;
+        };
+        this.get=function(key){
+          return this.has(key)?items[key]:undefined;
+        };
+        this.clear=function(){
+
+        };
+        this.size=function(){
+
+        };
+        this.keys=function () {
+
+        };
+        this.values=function () {
+          var values=[];
+          for (var k in items) {
+            if (this.has(k)) {
+              values.push(items[k]);
+            }
+          }
+          return values;
+        };
+        this.getItems=function(){
+          return items;
+        };
+
+      }
+      // 解决散列值重复的三种方法：分离链接、线性探查、双散列法。
+      // 1、分离链接法为散列表的每一个位置创建一个链表并将元素存储在里面
+      //分离链接的哈希表
+      //被注释的为普通的哈希表
+      function HashTable() {
+        var table=[];
+        var loseHashCode=function(key){
+          var hash=0;
+          for(var i=0;i<key.length;i++){
+            hash+=key.charCodeAt(i);
+          }
+          return hash%37;
+        };
+        var ValuePair=function (key,value) {
+          this.key=key;
+          this.value=value;
+          this.toString=function () {
+            return "["+this.key+"-"+this.value+"]";
+          }
+        }
+        this.put=function(key,value){
+          var position=loseHashCode(key);
+          // console.log(position,"-",key);
+          // table[position]=value;
+          if(table[position]==undefined){
+            //每一个位置都是一个链表
+            table[position]=new LinkedList();
+          }
+          table[position].append(new ValuePair(key,value));
+        };
+        this.remove=function(key){
+          //table[loseHashCode(key)]=undefined;
+          var position=loseHashCode(key);
+          if(table[position]!==undefined){
+            var current=table[position].getHead();
+            while(current.next){
+              if(current.element.key===key){
+                table[position].remove(current.element);
+                if(table[position].isEmpty()){
+                  table[position]=undefined;
+                }
+                return true;
+              }
+              current=current.next;
+            }
+            if(current.element.key===key){
+              table[position].remove(element);
+              if(table[position].isEmpty()){
+                table[position]=undefined;
+              }
+              return true;
+            }
+          }
+          return false;
+        };
+        this.get=function(key){
+          //return table[loseHashCode(key)];
+          var position=loseHashCode(key);
+          if (table[position]!==undefined) {
+            var current=table[position].getHead();
+            while (current.next) {
+              if (current.element.key===key) {
+                return current.element.value;
+              }
+              current=current.next;
+            }
+            if (current.element.key===key) {
+              return current.element.value;
+            }
+          }
+          return undefined;
+        };
+        this.print=function(){
+          for (var i = 0; i < table.length; i++) {
+            if(table[i]!=undefined){
+              console.log(i,":",table[i]);
+            }
+          }
+        };
+      }
+      //2、线性探查
+      // 当想向表中某个位置加入一个新的元素时，如果索引为index的位置已经被占据了，
+      // 就尝试index+1的位置。如果index+1的位置也被占据了，就尝试index+2的位置
+      // 以此类推
+      function LDHashTable() {
+        // ... 省略重复的代码
+        this.put=function (key,value) {
+          if(table[position]==undefined){
+            table[position]=new KeyValuePair(key,value);
+          }else{
+            var index=++position;
+            while (table[index]!=undefined) {
+              index++
+            }
+            table[position]=new KeyValuePair(key,value);
+          }
+        }
+        this.get=function (key) {
+          var position=loseHashCode(key);
+          if(table[position]!==undefined){
+            if(table[position].key===key){
+              return table[position].value;
+            }else{
+              var index=++index;
+              // 原书中是 table[index]===undefined || table[index].key!==key
+              while (table[index]!==undefined && table[index].key!==key) {
+                index++;
+              }
+              if(table[index] && table[index].key===key){
+                return table[index].value;
+              }
+            }
+          }
+        }
+      }
+
+      // 更好的散列函数
+      var djb2HashCode=function (key) {
+        var hash=5381;//一个质数，大多数情况下为5381
+        for (var i = 0; i < key.length; i++) {
+          hash=hash*33+key.charCodeAt(i);
+        }
+        return hash%1013;
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
