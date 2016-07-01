@@ -1,0 +1,8 @@
+{
+  "generator-react-webpack": {
+    "appName": "akkaReactWebpack",
+    "style": "scss",
+    "postcss": true,
+    "generatedWithVersion": 3
+  }
+}

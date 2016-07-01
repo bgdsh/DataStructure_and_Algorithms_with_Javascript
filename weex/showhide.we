@@ -1,0 +1,19 @@
+<template>
+  <container>
+    <text onclick="toggle">Toggle</text>
+    <image src="http://t.cn/RGE3uo9" if="{{shown}}"></image>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      shown: true
+    },
+    methods: {
+      toggle: function () {
+        this.shown = !this.shown
+      }
+    }
+  }
+</script>
