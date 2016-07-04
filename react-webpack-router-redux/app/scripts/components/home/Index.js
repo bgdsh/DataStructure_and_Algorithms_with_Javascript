@@ -9,6 +9,13 @@ class Home extends Component {
     this.context.router.push('/example');
   }
 
+  gotoAbout(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log('routerObject', this.context.router);
+    this.context.router.push('/about')
+  }
+
   render() {
     return (
       <div className="perfect">
@@ -17,7 +24,8 @@ class Home extends Component {
             <a className="link" onTouchTap={(event) => this.previewExample(event)}>查看例子</a>
           </li>
           <li>
-            <Link className="link" to="/about">关于</Link>
+            <Link className="link" to="/about" onClick={(event) => console.log('event', event)}>关于</Link>
+            <a className="link" onClick={(event) => this.gotoAbout(event)}>关于</a>
           </li>
         </ol>
       </div>

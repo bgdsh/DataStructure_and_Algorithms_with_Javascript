@@ -43,7 +43,7 @@ class Loading extends Component {
           <button type="button" className="btn btn-info"
                   onTouchTap={() => {this.loadError()}}>加载失败
           </button>
-          <button type="button" className={classnames({btn: true, 'load-shim': true, loading})}>Loading
+          <button type="button" className={classnames({btn: true, 'load-shim': true, loading})}>加载中
           </button>
         </div>
       </div>

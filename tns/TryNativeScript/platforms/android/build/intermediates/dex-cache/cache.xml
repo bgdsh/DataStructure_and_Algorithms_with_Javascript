@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/TryNativeScript/binding-generator/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cd7dd3d8b3faa7a457003b040d45b12c7e268dc6">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/TryNativeScript-binding-generator-unspecified_4c7a703931c47f9d04d8fca7e8bdfb7bf361cd51.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-appcompat-v7-23.2.1_da0f5761077ff2f7f6763f2da2e5f80c9b976706.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-vector-drawable-23.2.1_1bbed63f78e501af1e0950eed16ce09bdf5627f3.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/support-annotations-23.2.1_270f3488b03dce0798417e562d254758b03e27ec.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/widgets-release/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f2e5203427159d06a7104c1a113eee1c22e0ceb9">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/intermediates-exploded-aar-widgets-release_929039c3b4f88901005893ab9789a64b0ccefc1f.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-animated-vector-drawable-23.2.1_6219f904375f31a8b7ef9a2e21450036e4c7a936.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/TryNativeScript/runtime/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f8c8ebc987f6538a65f5cfd308d5984746999d79">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/TryNativeScript-runtime-unspecified_680415e4d137007a388e863197cc59a296b41b8d.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/internal_impl-23.2.1_368dce20e28f0acd62aef1f1c152e2e34839b23a.jar" />
+    </item>
+    <item
+        jar="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/bgd/playground/tns/TryNativeScript/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-v4-23.2.1_6de84fcdc322d550868292c4ea655cd1fb34c1ed.jar" />
+    </item>
+
+</items>
