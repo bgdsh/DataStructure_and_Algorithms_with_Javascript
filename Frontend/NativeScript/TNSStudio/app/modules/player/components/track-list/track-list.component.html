@@ -1,0 +1,9 @@
+<ListView [items]="playerService.tracks | orderBy: 'order'">
+  <ng-template let-track="item">
+    <GridLayout rows="auto" columns="75, *, 100">
+      <Button text="REC" (tap)="record(track)" row="0" col="0"></Button>
+      <Label [text]="track.name" row="0" col="1"></Label>
+      <Switch row="0" col="2"></Switch>
+    </GridLayout>
+  </ng-template>
+</ListView>
