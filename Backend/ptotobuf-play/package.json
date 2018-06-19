@@ -1,0 +1,16 @@
+{
+  "name": "ptotobuf-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pbjs": "pbjs -t static-module -o hello.js hello.proto",
+    "pbts": "pbts hello.js -o hello.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protobufjs": "^6.8.6"
+  }
+}
