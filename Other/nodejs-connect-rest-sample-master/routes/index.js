@@ -4,15 +4,16 @@
  */
 
 /**
-* This sample shows how to:
-*    - Get the current user's metadata
-*    - Get the current user's profile photo
-*    - Attach the photo as a file attachment to an email message
-*    - Upload the photo to the user's root drive
-*    - Get a sharing link for the file and add it to the message
-*    - Send the email
-*/
+ * This sample shows how to:
+ *    - Get the current user's metadata
+ *    - Get the current user's profile photo
+ *    - Attach the photo as a file attachment to an email message
+ *    - Upload the photo to the user's root drive
+ *    - Get a sharing link for the file and add it to the message
+ *    - Send the email
+ */
 const express = require('express');
+const fs = require('fs');
 const router = express.Router();
 const graphHelper = require('../utils/graphHelper.js');
 const emailer = require('../utils/emailer.js');
@@ -32,27 +33,33 @@ router.get('/', (req, res) => {
 
 // Authentication request.
 router.get('/login',
-  passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
-    (req, res) => {
-      res.redirect('/');
-    });
+  passport.authenticate('azuread-openidconnect', {
+    failureRedirect: '/'
+  }),
+  (req, res) => {
+    res.redirect('/');
+  });
 
 // Authentication callback.
 // After we have an access token, get user data and load the sendMail page.
 router.get('/token',
-  passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
-    (req, res) => {
-      graphHelper.getUserData(req.user.accessToken, (err, user) => {
-        console.log(user)
-        if (!err) {
-          req.user.profile.displayName = user.body.displayName;
-          req.user.profile.emails = [{ address: user.body.mail || user.body.userPrincipalName }];
-          renderSendMail(req, res);
-        } else {
-          renderError(err, res);
-        }
-      });
+  passport.authenticate('azuread-openidconnect', {
+    failureRedirect: '/'
+  }),
+  (req, res) => {
+    graphHelper.getUserData(req.user.accessToken, (err, user) => {
+      console.log(user);
+      if (!err) {
+        req.user.profile.displayName = user.body.displayName;
+        req.user.profile.emails = [{
+          address: user.body.mail || user.body.userPrincipalName
+        }];
+        renderSendMail(req, res);
+      } else {
+        renderError(err, res);
+      }
     });
+  });
 
 // Load the sendMail page.
 function renderSendMail(req, res) {
@@ -72,33 +79,32 @@ function prepForEmailMessage(req, callback) {
   graphHelper.getProfilePhoto(accessToken, (errPhoto, profilePhoto) => {
     // //// TODO: MSA flow with local file (using fs and path?)
     if (!errPhoto) {
-        // Upload profile photo as file to OneDrive.
-        graphHelper.uploadFile(accessToken, profilePhoto, (errFile, file) => {
-          // Get sharingLink for file.
-          graphHelper.getSharingLink(accessToken, file.id, (errLink, link) => {
-            const mailBody = emailer.generateMailBody(
-              displayName,
-              destinationEmailAddress,
-              link.webUrl,
-              profilePhoto
-            );
-            callback(null, mailBody);
-          });
+      // Upload profile photo as file to OneDrive.
+      graphHelper.uploadFile(accessToken, profilePhoto, (errFile, file) => {
+        // Get sharingLink for file.
+        graphHelper.getSharingLink(accessToken, file.id, (errLink, link) => {
+          const mailBody = emailer.generateMailBody(
+            displayName,
+            destinationEmailAddress,
+            link.webUrl,
+            profilePhoto
+          );
+          callback(null, mailBody);
         });
-      }
-      else {
-        var fs = require('fs');
-        var readableStream = fs.createReadStream('public/img/test.jpg');
-        var picFile;
-        var chunk;
-        readableStream.on('readable', function() {
-          while ((chunk=readableStream.read()) != null) {
-            picFile = chunk;
-          }
       });
-      
-      readableStream.on('end', function() {
+    } else {
+      const readableStream = fs.createReadStream('public/img/test.jpg');
+      let picFile;
+      let chunk;
+      readableStream.on('readable', function () {
+        chunk = readableStream.read();
+        while (chunk !== null) {
+          picFile = chunk;
+          chunk = readableStream.read();
+        }
+      });
 
+      readableStream.on('end', function () {
         graphHelper.uploadFile(accessToken, picFile, (errFile, file) => {
           // Get sharingLink for file.
           graphHelper.getSharingLink(accessToken, file.id, (errLink, link) => {
@@ -112,7 +118,7 @@ function prepForEmailMessage(req, callback) {
           });
         });
       });
-      }
+    }
   });
 }
 
@@ -161,9 +167,9 @@ function hasAccessTokenExpired(e) {
   return expired;
 }
 /**
- * 
- * @param {*} e 
- * @param {*} res 
+ *
+ * @param {*} e
+ * @param {*} res
  */
 function renderError(e, res) {
   e.innerError = (e.response) ? e.response.text : '';
