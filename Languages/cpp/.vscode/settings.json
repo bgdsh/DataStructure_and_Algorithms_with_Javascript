@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+    "*.njk": "nunjucks",
+    "*.html": "html",
+    "iostream": "cpp",
+    "iosfwd": "cpp",
+    "__split_buffer": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "hash_map": "cpp",
+    "iterator": "cpp",
+    "string_view": "cpp",
+    "unordered_map": "cpp",
+    "hashtable": "cpp"
+  }
+}
