@@ -1,0 +1,32 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "Backend/graphql-demo/package.json",
+        "Backend/koa2-try/package.json",
+        "Backend/node-net/package.json",
+        "Backend/ptotobuf-play/package.json",
+        "Frontend/NativeScript/InitionalNS/app/package.json",
+        "Frontend/NativeScript/InitionalNS/package.json",
+        "Frontend/NativeScript/TNSStudio/app/package.json",
+        "Frontend/NativeScript/TNSStudio/package.json",
+        "Frontend/NativeScript/TryNativeScript/app/package.json",
+        "Frontend/NativeScript/TryNativeScript/package.json",
+        "Frontend/RNAwesomeProjectNative/package.json",
+        "Frontend/TestReactWebpack/package.json",
+        "Frontend/angular2/first/package.json",
+        "Frontend/angular2/heros/package.json",
+        "Frontend/react-reflux-demo/package.json",
+        "Frontend/react-webpack-gallery/package.json",
+        "Frontend/react-webpack-router-redux/package.json",
+        "Frontend/webpack-play/package.json",
+        "Frontend/webpack-react/package.json",
+        "Languages/npm-co/package.json",
+        "MyResume/package.json",
+        "Other/nodejs-connect-rest-sample-master/package.json",
+        "PlayNewTech/my_cool_app/package.json",
+        "PlayNewTech/ng-go-fullstack/package.json"
+      ]
+    }
+  }
+}
